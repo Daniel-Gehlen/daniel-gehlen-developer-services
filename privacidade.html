@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade | Daniel Gehlen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .privacy-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .privacy-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .privacy-header h1 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      .privacy-header p {
+        color: #aaa;
+        font-size: 1.1rem;
+      }
+
+      .privacy-content {
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        padding: 3rem;
+        border: 1px solid var(--border);
+      }
+
+      .privacy-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .privacy-section h2 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .privacy-section h2 i {
+        font-size: 1.2rem;
+      }
+
+      .privacy-section p,
+      .privacy-section ul {
+        color: #ccc;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .privacy-section ul {
+        padding-left: 1.5rem;
+      }
+
+      .privacy-section li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1rem;
+      }
+
+      .privacy-section li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      .data-collection-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+
+      .data-collection-table th {
+        background-color: rgba(15, 204, 69, 0.1);
+        padding: 1rem;
+        text-align: left;
+        border: 1px solid var(--border);
+        color: var(--accent);
+      }
+
+      .data-collection-table td {
+        padding: 1rem;
+        border: 1px solid var(--border);
+        color: #ccc;
+      }
+
+      .highlight-box {
+        background-color: rgba(15, 204, 69, 0.05);
+        border-left: 4px solid var(--accent);
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .highlight-box p {
+        margin: 0;
+        color: #ccc;
+      }
+
+      .privacy-footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        color: #aaa;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .privacy-content {
+          padding: 2rem 1.5rem;
+        }
+
+        .privacy-header h1 {
+          font-size: 2rem;
+        }
+
+        .data-collection-table {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-music"></i>
+        <span>Daniel Gehlen</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <!-- Atualizado -->
+          <li><a href="index.html#servicos">Serviços</a></li>
+          <li><a href="audio.html">Amostras de Áudio</a></li>
+          <li><a href="library.html">Biblioteca</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Pesquisar..." />
+      </div>
+    </header>
+
+    <!-- Privacy Policy Content -->
+    <main class="privacy-container">
+      <div class="privacy-header">
+        <h1><i class="fas fa-shield-alt"></i> Política de Privacidade</h1>
+        <p>Última atualização: 5 de Fevereiro de 2026</p>
+      </div>
+
+      <div class="privacy-content">
+        <div class="privacy-section">
+          <h2><i class="fas fa-info-circle"></i> Introdução</h2>
+          <p>
+            Esta Política de Privacidade descreve como Daniel Gehlen ("nós",
+            "nosso" ou "nos") coleta, usa e compartilha suas informações
+            pessoais quando você utiliza nosso site e serviços musicais. Estamos
+            comprometidos em proteger sua privacidade e em cumprir com a Lei
+            Geral de Proteção de Dados (LGPD - Lei 13.709/2018).
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>
+            <i class="fas fa-user-check"></i> Consentimento e Idade Mínima
+          </h2>
+          <p>Ao utilizar nosso site, você declara que:</p>
+          <ul>
+            <li>
+              É maior de 18 anos ou possui autorização dos responsáveis legais
+            </li>
+            <li>Concorda com os termos desta Política de Privacidade</li>
+            <li>
+              Aceita o uso de cookies e tecnologias similares conforme descrito
+              abaixo
+            </li>
+          </ul>
+        </div>
+
+        <div class="privacy-section">
+          <h2><i class="fas fa-database"></i> Dados que Coletamos</h2>
+          <p>
+            Coletamos apenas os dados mínimos necessários para oferecer nossos
+            serviços:
+          </p>
+
+          <table class="data-collection-table">
+            <thead>
+              <tr>
+                <th>Tipo de Dado</th>
+                <th>Finalidade</th>
+                <th>Base Legal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Dados de Contato</strong><br />Nome, e-mail, telefone
+                </td>
+                <td>
+                  Para comunicação sobre seus projetos musicais, agendamento de
+                  aulas e envio de partituras
+                </td>
+                <td>Execução de contrato</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Dados do Projeto</strong><br />Áudios enviados,
+                  preferências musicais, nível de habilidade
+                </td>
+                <td>
+                  Para fornecer os serviços de transcrição, criação de
+                  partituras e aulas personalizadas
+                </td>
+                <td>Execução de contrato</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Dados Técnicos Automáticos</strong><br />Endereço IP,
+                  tipo de navegador, páginas visitadas, tempo de visita
+                </td>
+                <td>
+                  Para segurança do site, análise de uso e melhoria da
+                  experiência do usuário
+                </td>
+                <td>Interesse legítimo</td>
+              </tr>
+              <tr>
+                <td><strong>Cookies Essenciais</strong></td>
+                <td>
+                  Para funcionamento básico do site (preferências de tema,
+                  progresso salvo)
+                </td>
+                <td>Execução de contrato</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="highlight-box">
+            <p>
+              <strong>Importante:</strong> Não coletamos dados sensíveis, dados
+              de localização precisos, nem compartilhamos seus dados com
+              terceiros para marketing. Seus áudios e partituras são tratados
+              com confidencialidade.
+            </p>
+          </div>
+        </div>
+
+        <div class="privacy-section">
+          <h2>
+            <i class="fas fa-cookie-bite"></i> Cookies e Tecnologias Similares
+          </h2>
+          <p>Utilizamos cookies para:</p>
+          <ul>
+            <li>
+              Lembrar suas preferências (tema claro/escuro, cores do projeto)
+            </li>
+            <li>Manter você logado durante a navegação</li>
+            <li>Salvar o progresso de seus projetos musicais</li>
+            <li>Melhorar a segurança do site</li>
+          </ul>
+          <p>
+            Você pode controlar cookies através das configurações do seu
+            navegador, mas algumas funcionalidades do site podem não funcionar
+            corretamente sem eles.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2><i class="fas fa-share-alt"></i> Compartilhamento de Dados</h2>
+          <p>
+            Seus dados pessoais não são vendidos ou alugados. Podemos
+            compartilhar informações apenas:
+          </p>
+          <ul>
+            <li>Com seu consentimento explícito</li>
+            <li>Para cumprir obrigações legais</li>
+            <li>
+              Com provedores de serviços essenciais (hospedagem, e-mail) sob
+              contratos de confidencialidade
+            </li>
+            <li>
+              Para proteger direitos, propriedade ou segurança nossa ou de
+              terceiros
+            </li>
+          </ul>
+        </div>
+
+        <div class="privacy-section">
+          <h2><i class="fas fa-user-shield"></i> Seus Direitos (LGPD)</h2>
+          <p>Conforme a LGPD, você tem direito a:</p>
+          <ul>
+            <li>
+              <strong>Confirmação e Acesso:</strong> Saber se tratamos seus
+              dados e acessá-los
+            </li>
+            <li>
+              <strong>Correção:</strong> Solicitar correção de dados incompletos
+              ou desatualizados
+            </li>
+            <li>
+              <strong>Anonimização, Bloqueio ou Eliminação:</strong> Solicitar
+              limitação do tratamento
+            </li>
+            <li>
+              <strong>Portabilidade:</strong> Solicitar transferência dos dados
+              para outro fornecedor
+            </li>
+            <li>
+              <strong>Eliminação:</strong> Solicitar exclusão de dados tratados
+              com consentimento
+            </li>
+            <li>
+              <strong>Revogação do Consentimento:</strong> Revogar consentimento
+              a qualquer momento
+            </li>
+          </ul>
+          <p>
+            Para exercer seus direitos, entre em contato:
+            <strong>contato@danielgehlen.com</strong>
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2><i class="fas fa-lock"></i> Segurança dos Dados</h2>
+          <p>
+            Implementamos medidas técnicas e organizacionais adequadas para
+            proteger seus dados contra acesso não autorizado, alteração,
+            divulgação ou destruição. Seus áudios e partituras são armazenados
+            em ambiente seguro e acesso restrito.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2><i class="fas fa-clock"></i> Retenção de Dados</h2>
+          <p>Mantemos seus dados apenas pelo tempo necessário para:</p>
+          <ul>
+            <li>Cumprir finalidades descritas nesta política</li>
+            <li>Atender requisitos legais ou regulatórios</li>
+            <li>Resolver disputas</li>
+            <li>Cumprir acordos</li>
+          </ul>
+          <p>
+            Projetos musicais concluídos são mantidos por 5 anos para possível
+            acesso futuro do cliente.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2><i class="fas fa-envelope"></i> Contato</h2>
+          <p>Para questões sobre privacidade ou exercício de direitos:</p>
+          <p>
+            <strong>Encarregado de Proteção de Dados:</strong> Daniel Gehlen<br />
+            <strong>E-mail:</strong> contato@danielgehlen.com<br />
+            <strong>Resposta:</strong> Em até 15 dias úteis
+          </p>
+        </div>
+
+        <div class="privacy-footer">
+          <p>
+            Esta política pode ser atualizada periodicamente. Alterações
+            significativas serão comunicadas.
+          </p>
+          <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Voltar para o site
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2026 Daniel Gehlen. Protegendo sua privacidade musical.</p>
+        <div class="footer-links">
+          <a href="privacidade.html">Política de Privacidade</a>
+          <a href="termos.html">Termos de Serviço</a>
+          <a href="mailto:contato@danielgehlen.com">Contato</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Tema automático
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = localStorage.getItem("theme") || "dark";
+        if (savedTheme === "light") {
+          document.body.classList.add("light-mode");
+        }
+      });
+    </script>
+  </body>
+</html>

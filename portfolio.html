@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Daniel Gehlen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="dev-header">
+      <div class="container">
+        <nav class="dev-nav">
+          <div class="nav-brand">
+            <div class="logo-code">
+              <span class="code-tag">&lt;</span>
+              <span class="code-name">Portfolio</span>
+              <span class="code-tag">/&gt;</span>
+            </div>
+          </div>
+
+          <div class="nav-menu">
+            <ul class="nav-links">
+              <li><a href="index.html" class="nav-link">Início</a></li>
+              <li><a href="index.html#about" class="nav-link">Sobre</a></li>
+              <li>
+                <a href="portfolio.html" class="nav-link active">Portfólio</a>
+              </li>
+              <li><a href="services.html" class="nav-link">Serviços</a></li>
+              <li><a href="contact.html" class="nav-link">Contato</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Portfolio Hero -->
+    <section class="page-hero portfolio-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">Meu <span class="accent">Portfólio</span></h1>
+          <p class="hero-subtitle">
+            Projetos reais, soluções funcionais, código de qualidade
+          </p>
+
+          <div class="portfolio-stats">
+            <div class="stat">
+              <div class="stat-number" id="totalRepos">200+</div>
+              <div class="stat-label">Repositórios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="totalLanguages">8+</div>
+              <div class="stat-label">Linguagens</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number" id="totalCommits">500+</div>
+              <div class="stat-label">Commits</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="portfolio-filters">
+      <div class="container">
+        <div class="filter-container">
+          <h3>Filtrar por:</h3>
+
+          <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="api">API/Backend</button>
+            <button class="filter-btn" data-filter="fullstack">
+              Full Stack
+            </button>
+            <button class="filter-btn" data-filter="tool">Ferramentas</button>
+          </div>
+
+          <div class="sort-options">
+            <select id="sortSelect" class="sort-select">
+              <option value="updated">Mais Recentes</option>
+              <option value="stars">Mais Populares</option>
+              <option value="name">A-Z</option>
+              <option value="language">Linguagem</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid-section">
+      <div class="container">
+        <div class="portfolio-grid" id="projectsGrid">
+          <!-- Projetos serão inseridos aqui -->
+        </div>
+
+        <div class="load-more" style="text-align: center; margin-top: 3rem">
+          <a
+            href="https://github.com/Daniel-Gehlen"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            <i class="fab fa-github"></i> Ver Todos no GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+      <div class="container">
+        <h2 class="section-title">Categorias de Projetos</h2>
+
+        <div class="categories-grid">
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Aplicações Web</h3>
+            <p>
+              Sistemas completos, dashboards, e-commerce e landing pages
+              responsivas.
+            </p>
+            <div class="category-count">8 projetos</div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3>APIs & Backend</h3>
+            <p>
+              Sistemas de backend, APIs RESTful, autenticação e processamento de
+              dados.
+            </p>
+            <div class="category-count">5 projetos</div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile & PWA</h3>
+            <p>
+              Aplicativos responsivos, Progressive Web Apps e interfaces
+              mobile-first.
+            </p>
+            <div class="category-count">3 projetos</div>
+          </div>
+
+          <div class="category-card">
+            <div class="category-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Ferramentas & Utilitários</h3>
+            <p>
+              Scripts, CLI tools, automatizações e ferramentas de
+              desenvolvimento.
+            </p>
+            <div class="category-count">4 projetos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="portfolio-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Gostou do que viu?</h2>
+          <p>Vamos conversar sobre como posso ajudar no seu próximo projeto!</p>
+
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-primary btn-large">
+              <i class="fas fa-paper-plane"></i> Iniciar Projeto
+            </a>
+            <a href="services.html" class="btn btn-secondary btn-large">
+              <i class="fas fa-list"></i> Ver Serviços
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dev-footer">
+      <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="modal-body" id="modalBody">
+          <!-- Project details will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="portfolio.js"></script>
+  </body>
+</html>

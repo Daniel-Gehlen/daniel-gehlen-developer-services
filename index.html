@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Gehlen | Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* CSS de emergência - CORRIGIDO */
+      .dev-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--dev-primary);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--dev-border);
+        transition: background-color 0.3s;
+      }
+
+      body.light-mode .dev-header {
+        background-color: rgba(248, 250, 252, 0.95);
+        border-bottom-color: var(--dev-light-border);
+      }
+
+      main {
+        padding-top: 80px;
+      }
+
+      /* Prevenir FOUC (Flash of Unstyled Content) */
+      .animate-on-scroll:not(.animate-in) {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher" id="languageSwitcher">
+      <!-- Populated by JavaScript -->
+    </div>
+
+    <!-- Header -->
+    <header class="dev-header">
+      <div class="container">
+        <nav class="dev-nav">
+          <div class="nav-brand">
+            <div class="logo-code">
+              <span class="code-tag">&lt;</span>
+              <span class="code-name">DanielGehlen</span>
+              <span class="code-tag">/&gt;</span>
+            </div>
+          </div>
+
+          <div class="nav-menu">
+            <ul class="nav-links">
+              <li>
+                <a
+                  href="#home"
+                  class="nav-link active"
+                  data-translate="nav.home"
+                  >Início</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="nav-link" data-translate="nav.about"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="nav-link"
+                  data-translate="nav.portfolio"
+                  >Portfólio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="nav-link"
+                  data-translate="nav.services"
+                  >Serviços</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="nav-link" data-translate="nav.contact"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+
+            <div class="nav-cta">
+              <a
+                href="contact.html"
+                class="btn btn-primary"
+                data-translate="hero.cta2"
+                >Contato Rápido</a
+              >
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="dev-hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <span class="badge-text" data-translate="hero.subtitle"
+                >Desenvolvedor Full Stack</span
+              >
+            </div>
+
+            <h1 class="hero-title">
+              <span class="title-line" data-translate="hero.title"
+                >Daniel Gehlen</span
+              >
+              <span class="title-subline">Digital Solutions</span>
+            </h1>
+
+            <p class="hero-description" data-translate="hero.description">
+              Transformo desafios complexos em soluções web elegantes e
+              eficientes. Especializado em desenvolvimento full stack com foco
+              em performance, segurança e experiência do usuário.
+            </p>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label" data-translate="stats.projects">
+                  Projetos
+                </div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">2+</div>
+                <div class="stat-label" data-translate="stats.years">
+                  Anos Exp
+                </div>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label" data-translate="stats.clients">
+                  Satisfação
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="portfolio.html" class="btn btn-primary btn-large">
+                <i class="fas fa-code"></i>
+                <span data-translate="hero.cta1">Ver Portfólio</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary btn-large">
+                <i class="fas fa-paper-plane"></i>
+                <span>Iniciar Projeto</span>
+              </a>
+            </div>
+
+            <div class="hero-social">
+              <a
+                href="https://github.com/Daniel-Gehlen"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/daniel-gehlen/"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=+5551989345497&text=Olá%20Daniel%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços."
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <!-- Foto de perfil EM CIMA do código -->
+            <div class="profile-above-code">
+              <div class="profile-frame">
+                <img
+                  src="resources/images/eu-perfil.png"
+                  alt="Daniel Gehlen"
+                  class="profile-image"
+                />
+                <div class="profile-badge">
+                  <i class="fas fa-code"></i>
+                  <span>Online</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Janela de código ABAIXO da foto -->
+            <div class="code-window">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="window-title">terminal — daniel@dev ~</span>
+              </div>
+              <div class="window-content">
+                <pre><code class="language-javascript">
+            <span class="code-comment">// Desenvolvendo soluções digitais</span>
+            <span class="code-keyword">class</span> <span class="code-class">Developer</span> {
+                <span class="code-function">constructor</span>() {
+                    <span class="code-keyword">this</span>.name = <span class="code-string">"Daniel Gehlen"</span>;
+                    <span class="code-keyword">this</span>.role = <span class="code-string">"Full Stack Developer"</span>;
+                    <span class="code-keyword">this</span>.skills = [
+                        <span class="code-string">"JavaScript"</span>,
+                        <span class="code-string">"Python"</span>,
+                        <span class="code-string">"React"</span>,
+                        <span class="code-string">"Node.js"</span>,
+                        <span class="code-string">"Django"</span>,
+                        <span class="code-string">"Flask"</span>
+                    ];
+                }
+
+                <span class="code-function">buildProject</span>(idea) {
+                    <span class="code-keyword">return</span> <span class="code-string">`Transformando </span>${idea}<span class="code-string"> em realidade`</span>;
+                }
+            }
+
+            <span class="code-keyword">const</span> dev = <span class="code-keyword">new</span> <span class="code-class">Developer</span>();
+            <span class="code-function">console</span>.<span class="code-function">log</span>(dev.buildProject(<span class="code-string">"sua ideia"</span>));
+                        </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="dev-about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="about.title">
+            Minha Jornada
+          </h2>
+          <p class="section-subtitle" data-translate="about.intro">
+            Da ideia à implementação, cada projeto é uma nova oportunidade de
+            criar algo extraordinário.
+          </p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-story">
+            <div class="story-card">
+              <div class="story-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="story-content">
+                <h3 data-translate="about.education">Formação & Base</h3>
+                <p>
+                  Formação em tecnologia com especialização em desenvolvimento
+                  de software. Constante aprendizado através de cursos,
+                  certificações e prática real em projetos.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div class="story-content">
+                <h3 data-translate="about.experience">Experiência Prática</h3>
+                <p>
+                  Mais de 2 anos desenvolvendo soluções para diversos setores.
+                  Experiência em projetos freelance, startups e desenvolvimento
+                  de produtos próprios.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="story-content">
+                <h3 data-translate="about.skills">Habilidades Técnicas</h3>
+                <p>
+                  Stack completa desde frontend até infraestrutura. Foco em
+                  criar soluções escaláveis, seguras e com excelente
+                  performance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-tech">
+            <h3 class="tech-title" data-translate="tech.title">
+              Tecnologias & Ferramentas
+            </h3>
+
+            <div class="tech-categories">
+              <div class="tech-category">
+                <h4>Frontend</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Vue.js</span>
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3/SASS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Bootstrap</span>
+                  <span class="tech-tag">Tailwind</span>
+                </div>
+              </div>
+
+              <div class="tech-category">
+                <h4>Backend</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Django</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">REST APIs</span>
+                  <span class="tech-tag">GraphQL</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                </div>
+              </div>
+
+              <div class="tech-category">
+                <h4>DevOps & Tools</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Git</span>
+                  <span class="tech-tag">AWS</span>
+                  <span class="tech-tag">CI/CD</span>
+                  <span class="tech-tag">Linux</span>
+                  <span class="tech-tag">Nginx</span>
+                  <span class="tech-tag">Webpack</span>
+                  <span class="tech-tag">Vite</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="dev-services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="services.title">
+            Serviços
+          </h2>
+          <p class="section-subtitle">
+            Soluções completas do conceito à implementação
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 data-translate="services.web">Desenvolvimento Web</h3>
+            <p data-translate="services.web_desc">
+              Sites responsivos, aplicações web modernas e sistemas sob medida.
+            </p>
+            <ul class="service-features">
+              <li>Landing Pages</li>
+              <li>E-commerce</li>
+              <li>Dashboards</li>
+              <li>Sistemas Web</li>
+            </ul>
+            <a href="services.html#web" class="service-link">Ver detalhes →</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 data-translate="services.api">APIs & Backend</h3>
+            <p data-translate="services.api_desc">
+              APIs robustas, sistemas de backend escaláveis e integrações.
+            </p>
+            <ul class="service-features">
+              <li>REST/GraphQL APIs</li>
+              <li>Microserviços</li>
+              <li>Autenticação</li>
+              <li>Integrações</li>
+            </ul>
+            <a href="services.html#api" class="service-link">Ver detalhes →</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3 data-translate="services.mobile">Soluções Mobile</h3>
+            <p data-translate="services.mobile_desc">
+              Aplicações mobile híbridas e responsivas para todos os
+              dispositivos.
+            </p>
+            <ul class="service-features">
+              <li>PWA</li>
+              <li>Apps Híbridos</li>
+              <li>Responsive Design</li>
+              <li>Mobile First</li>
+            </ul>
+            <a href="services.html#mobile" class="service-link"
+              >Ver detalhes →</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3 data-translate="services.devops">DevOps & Deploy</h3>
+            <p data-translate="services.devops_desc">
+              Configuração de ambientes, CI/CD e deploy automatizado.
+            </p>
+            <ul class="service-features">
+              <li>Docker</li>
+              <li>AWS/Azure</li>
+              <li>CI/CD Pipelines</li>
+              <li>Monitoramento</li>
+            </ul>
+            <a href="services.html#devops" class="service-link"
+              >Ver detalhes →</a
+            >
+          </div>
+        </div>
+
+        <div class="services-cta">
+          <a href="contact.html" class="btn btn-primary btn-large">
+            <i class="fas fa-calendar-check"></i>
+            <span>Solicitar Orçamento</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="dev-portfolio-preview" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-translate="portfolio.title">
+            Projetos em Destaque
+          </h2>
+          <p class="section-subtitle">
+            Algumas das soluções que desenvolvi recentemente
+          </p>
+        </div>
+
+        <div class="portfolio-grid" id="featuredProjects">
+          <!-- Projeto 1: Visualizador de Processos -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">HTML/CSS/JS</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 22
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/visualizador-de-processos/main/processVisualitation.gif"
+                alt="Visualizador de Processos"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Visualizador de Processos</h3>
+              <p>
+                Ferramenta para visualização de fluxos de processos com
+                diagramas interativos e dinâmicos.
+              </p>
+              <div class="project-tech">
+                <span>D3.js</span>
+                <span>SVG</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/visualizador-de-processos/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/visualizador-de-processos"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 2: Order Manager -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">JavaScript</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 34
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/order-manager/main/OrderManager.gif"
+                alt="Order Manager"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Order Manager</h3>
+              <p>
+                Sistema de gestão de pedidos com drag & drop, múltiplos status e
+                interface intuitiva.
+              </p>
+              <div class="project-tech">
+                <span>Drag & Drop API</span>
+                <span>JavaScript</span>
+                <span>CSS Grid</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/order-manager/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/order-manager"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 3: Cristie Doces Finos -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-candy-cane"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">HTML/CSS</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 18
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/cristiedocesfinos/main/crisitedocesfinos.gif"
+                alt="Cristie Doces Finos"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Cristie Doces Finos</h3>
+              <p>
+                Site institucional para confeitaria artesanal com catálogo de
+                produtos e design elegante.
+              </p>
+              <div class="project-tech">
+                <span>Design Responsivo</span>
+                <span>Galeria</span>
+                <span>Mobile First</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/cristiedocesfinos/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/cristiedocesfinos"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 4: List Manager App -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">React</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 51
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/list-manager-app/main/gerenciador-de-listas.gif"
+                alt="List Manager App"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>List Manager App</h3>
+              <p>
+                Aplicativo de gerenciamento de listas com sincronização em tempo
+                real e interface moderna.
+              </p>
+              <div class="project-tech">
+                <span>React Hooks</span>
+                <span>Context API</span>
+                <span>PWA</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/list-manager-app/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/list-manager-app"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 5: Task Scheduler -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">JavaScript</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 29
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/task-scheduler/main/taskscheduler.gif"
+                alt="Task Scheduler"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Task Scheduler</h3>
+              <p>
+                Sistema de agendamento de tarefas com lembretes, categorias e
+                visualização por calendário.
+              </p>
+              <div class="project-tech">
+                <span>LocalStorage</span>
+                <span>Date API</span>
+                <span>UI/UX</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/task-scheduler/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/task-scheduler"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 6: Book Optimal -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">HTML/CSS/JS</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 38
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/book-optimal/main/bookoptimal.gif"
+                alt="Book Optimal"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Book Optimal</h3>
+              <p>
+                Sistema de gestão de biblioteca pessoal com recomendações
+                inteligentes e busca avançada.
+              </p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>LocalStorage</span>
+                <span>Search API</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/book-optimal/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/book-optimal"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 7: News Gamification -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-newspaper"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">Rust</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 41
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/news-gamification/main/news.gif"
+                alt="News Gamification"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>News Gamification</h3>
+              <p>
+                Plataforma de notícias com sistema de gamificação, recompensas e
+                engajamento de usuários.
+              </p>
+              <div class="project-tech">
+                <span>Rust</span>
+                <span>WebAssembly</span>
+                <span>React</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://news-gamification-rust.vercel.app/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <button class="btn btn-small btn-secondary" disabled>
+                <i class="fab fa-github"></i> Privado
+              </button>
+            </div>
+          </div>
+
+          <!-- Projeto 8: Arborização Urbana -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-tree"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">Next.js</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 27
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/arborizacao-urbana/master/arbor-urb.gif"
+                alt="Arborização Urbana"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Arborização Urbana</h3>
+              <p>
+                Sistema de monitoramento e gestão de arborização urbana com mapa
+                interativo e dashboard.
+              </p>
+              <div class="project-tech">
+                <span>Next.js</span>
+                <span>TypeScript</span>
+                <span>Tailwind CSS</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://arborizacao-urbana.vercel.app/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <button class="btn btn-small btn-secondary" disabled>
+                <i class="fab fa-github"></i> Privado
+              </button>
+            </div>
+          </div>
+
+          <!-- Projeto 9: Clinic Website -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-hospital"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">HTML/CSS</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 32
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/html-clinic-website-development/main/clinica.gif"
+                alt="Clinic Website"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Clinic Website</h3>
+              <p>
+                Site completo para clínicas médicas com design profissional,
+                informações e agendamento.
+              </p>
+              <div class="project-tech">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Responsivo</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/html-clinic-website-development/index.html"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/html-clinic-website-development"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+
+          <!-- Projeto 10: Freelance Pricing Calculator -->
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-language">HTML/CSS/JS</span>
+                <span class="project-stars">
+                  <i class="fas fa-star"></i> 45
+                </span>
+              </div>
+            </div>
+
+            <div class="project-image">
+              <img
+                src="https://raw.githubusercontent.com/Daniel-Gehlen/html-freelance-pricing-calculator/main/calc-freelancer.gif"
+                alt="Freelance Pricing Calculator"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="project-content">
+              <h3>Freelance Pricing Calculator</h3>
+              <p>
+                Calculadora inteligente para precificação de serviços
+                freelancers com análise detalhada de custos.
+              </p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>Formulas</span>
+                <span>UI/UX</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://daniel-gehlen.github.io/html-freelance-pricing-calculator/"
+                target="_blank"
+                class="btn btn-small"
+              >
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <a
+                href="https://github.com/Daniel-Gehlen/html-freelance-pricing-calculator"
+                target="_blank"
+                class="btn btn-small btn-secondary"
+              >
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-cta">
+          <a
+            href="https://github.com/Daniel-Gehlen"
+            target="_blank"
+            class="btn btn-secondary btn-large"
+          >
+            <i class="fab fa-github"></i>
+            <span>Ver Mais no GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="dev-contact-cta" id="contact">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Vamos trabalhar juntos?</h2>
+          <p class="cta-description">
+            Conte-me sobre seu projeto e vamos criar algo incrível. Resposta
+            garantida em até 24 horas.
+          </p>
+
+          <div class="cta-form">
+            <form id="quickContactForm">
+              <div class="form-row">
+                <div class="form-group required">
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Seu nome completo *"
+                    required
+                  />
+                </div>
+                <div class="form-group required">
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="Seu e-mail *"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group required">
+                  <input
+                    type="text"
+                    id="contactCompany"
+                    name="company"
+                    placeholder="Empresa onde trabalha *"
+                    required
+                  />
+                </div>
+                <div class="form-group required">
+                  <input
+                    type="text"
+                    id="contactPosition"
+                    name="position"
+                    placeholder="Sua posição/cargo *"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group required">
+                <input
+                  type="tel"
+                  id="contactPhone"
+                  name="phone"
+                  placeholder="Telefone/WhatsApp *"
+                  required
+                />
+              </div>
+
+              <div class="form-group required">
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="4"
+                  placeholder="Descreva seu projeto ou ideia *"
+                  required
+                ></textarea>
+                <div class="char-count">
+                  <span id="charCount">0</span>/1000 caracteres
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="newsletter" checked />
+                  <span>Desejo receber novidades sobre desenvolvimento</span>
+                </label>
+              </div>
+
+              <div class="form-group required">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="terms" required />
+                  <span
+                    >Concordo com a
+                    <a href="privacy.html" target="_blank"
+                      >Política de Privacidade</a
+                    >
+                    *</span
+                  >
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-paper-plane"></i>
+                <span>Enviar Mensagem</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dev-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo-code">
+              <span class="code-tag">&lt;</span>
+              <span class="code-name">DG</span>
+              <span class="code-tag">/&gt;</span>
+            </div>
+            <p class="footer-tagline">
+              Desenvolvendo o futuro, um projeto de cada vez.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Navegação</h4>
+              <ul>
+                <li><a href="#home" data-translate="nav.home">Início</a></li>
+                <li><a href="#about" data-translate="nav.about">Sobre</a></li>
+                <li>
+                  <a href="#portfolio" data-translate="nav.portfolio"
+                    >Portfólio</a
+                  >
+                </li>
+                <li>
+                  <a href="#services" data-translate="nav.services">Serviços</a>
+                </li>
+                <li>
+                  <a href="#contact" data-translate="nav.contact">Contato</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Serviços</h4>
+              <ul>
+                <li><a href="services.html#web">Web Development</a></li>
+                <li><a href="services.html#api">APIs & Backend</a></li>
+                <li><a href="services.html#mobile">Mobile Solutions</a></li>
+                <li><a href="services.html#consulting">Consultoria</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Conecte-se</h4>
+              <ul class="footer-social">
+                <li>
+                  <a href="https://github.com/Daniel-Gehlen" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/daniel-gehlen/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:contato@danielgehlen.com">
+                    <i class="fas fa-envelope"></i> E-mail
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright" data-translate="footer.rights">
+            © 2026 Daniel Gehlen. Todos os direitos reservados.
+          </p>
+          <p class="footer-built">
+            <span data-translate="footer.built">Desenvolvido com</span>
+            <i class="fas fa-heart"></i>
+            <span data-translate="footer.and">e</span>
+            <i class="fas fa-code"></i>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="translator.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // Character counter for contact form
+      document.addEventListener("DOMContentLoaded", function () {
+        const messageTextarea = document.getElementById("contactMessage");
+        const charCount = document.getElementById("charCount");
+
+        if (messageTextarea && charCount) {
+          messageTextarea.addEventListener("input", function () {
+            const length = this.value.length;
+            charCount.textContent = length;
+
+            if (length > 900) {
+              charCount.style.color = "var(--dev-error)";
+            } else if (length > 700) {
+              charCount.style.color = "var(--dev-warning)";
+            } else {
+              charCount.style.color = "";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

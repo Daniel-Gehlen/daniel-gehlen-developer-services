@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termos de Serviço | Daniel Gehlen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .terms-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .terms-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .terms-header h1 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      .terms-header p {
+        color: #aaa;
+        font-size: 1.1rem;
+      }
+
+      .terms-content {
+        background-color: var(--card-bg);
+        border-radius: 15px;
+        padding: 3rem;
+        border: 1px solid var(--border);
+      }
+
+      .terms-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .terms-section h2 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .terms-section h2 i {
+        font-size: 1.2rem;
+      }
+
+      .terms-section p,
+      .terms-section ul {
+        color: #ccc;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .terms-section ul {
+        padding-left: 1.5rem;
+      }
+
+      .terms-section li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1rem;
+      }
+
+      .terms-section li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      .warning-box {
+        background-color: rgba(231, 76, 60, 0.1);
+        border-left: 4px solid #e74c3c;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .warning-box p {
+        margin: 0;
+        color: #ccc;
+      }
+
+      .info-box {
+        background-color: rgba(52, 152, 219, 0.1);
+        border-left: 4px solid #3498db;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .info-box p {
+        margin: 0;
+        color: #ccc;
+      }
+
+      .acceptance-box {
+        background-color: rgba(15, 204, 69, 0.1);
+        border: 2px solid var(--accent);
+        border-radius: 10px;
+        padding: 2rem;
+        margin: 3rem 0;
+        text-align: center;
+      }
+
+      .acceptance-box h3 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .terms-footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        color: #aaa;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .terms-content {
+          padding: 2rem 1.5rem;
+        }
+
+        .terms-header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-music"></i>
+        <span>Daniel Gehlen</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <!-- Atualizado -->
+          <li><a href="index.html#servicos">Serviços</a></li>
+          <li><a href="audio.html">Amostras de Áudio</a></li>
+          <li><a href="library.html">Biblioteca</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Pesquisar..." />
+      </div>
+    </header>
+
+    <!-- Terms Content -->
+    <main class="terms-container">
+      <div class="terms-header">
+        <h1><i class="fas fa-file-contract"></i> Termos de Serviço</h1>
+        <p>Última atualização: 5 de Fevereiro de 2026</p>
+      </div>
+
+      <div class="terms-content">
+        <div class="acceptance-box">
+          <h3>
+            <i class="fas fa-exclamation-triangle"></i> Aceitação dos Termos
+          </h3>
+          <p>Ao utilizar este site e nossos serviços, você declara que:</p>
+          <ul style="text-align: left; display: inline-block; margin: 1rem 0">
+            <li>É maior de 18 anos ou possui autorização dos responsáveis</li>
+            <li>Leu e compreendeu estes Termos de Serviço</li>
+            <li>Aceita integralmente todas as condições aqui estabelecidas</li>
+            <li>Concorda com nossa Política de Privacidade</li>
+          </ul>
+          <p>
+            <strong
+              >Se você não concorda com estes termos, não utilize nossos
+              serviços.</strong
+            >
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <h2><i class="fas fa-guitar"></i> 1. Nossos Serviços</h2>
+          <p>Daniel Gehlen oferece os seguintes serviços através deste site:</p>
+          <ul>
+            <li>
+              <strong>Aulas Online:</strong> Aulas particulares de violão,
+              guitarra e ukulele
+            </li>
+            <li>
+              <strong>Transcrição Musical:</strong> Conversão de áudio em
+              partituras profissionais
+            </li>
+            <li>
+              <strong>Criação de Partituras:</strong> Desenvolvimento de
+              arranjos e composições originais
+            </li>
+            <li>
+              <strong>Música para Eventos:</strong> Apresentações ao vivo com
+              violão erudito
+            </li>
+            <li>
+              <strong>Biblioteca Digital:</strong> Partituras para estudo e
+              prática
+            </li>
+          </ul>
+        </div>
+
+        <div class="terms-section">
+          <h2><i class="fas fa-user"></i> 2. Requisitos do Usuário</h2>
+          <p>Para utilizar nossos serviços, você deve:</p>
+          <ul>
+            <li>
+              Ser maior de 18 anos ou ter autorização dos responsáveis legais
+            </li>
+            <li>Fornecer informações verdadeiras e atualizadas</li>
+            <li>
+              Possuir os direitos necessários sobre os materiais que enviar
+              (áudios, composições)
+            </li>
+            <li>Utilizar os serviços apenas para fins legítimos</li>
+            <li>Respeitar os direitos de propriedade intelectual</li>
+          </ul>
+
+          <div class="warning-box">
+            <p>
+              <strong><i class="fas fa-ban"></i> Proibições:</strong> É proibido
+              usar nossos serviços para atividades ilegais, envio de material
+              protegido por direitos autorais sem permissão, ou qualquer ação
+              que prejudique o funcionamento do site.
+            </p>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <h2><i class="fas fa-credit-card"></i> 3. Pagamentos e Reembolsos</h2>
+          <p>
+            <strong>Pagamento:</strong> Os valores dos serviços são divulgados
+            no momento da contratação. O pagamento pode ser realizado através
+            dos métodos disponíveis no site.
+          </p>
+          <p><strong>Reembolsos:</strong></p>
+          <ul>
+            <li>
+              <strong>Aulas:</strong> Reembolso integral se cancelado com 24h de
+              antecedência
+            </li>
+            <li>
+              <strong>Transcrições:</strong> Reembolso proporcional ao trabalho
+              já realizado
+            </li>
+            <li>
+              <strong>Eventos:</strong> 50% de reembolso se cancelado com 7 dias
+              de antecedência
+            </li>
+            <li>
+              <strong>Conteúdo Digital:</strong> Não reembolsável após download
+            </li>
+          </ul>
+        </div>
+
+        <div class="terms-section">
+          <h2>
+            <i class="fas fa-copyright"></i> 4. Direitos Autorais e Propriedade
+          </h2>
+          <p>
+            <strong>Do Cliente:</strong> Você mantém todos os direitos sobre os
+            áudios originais que enviar. As partituras criadas a partir de seus
+            áudios são de sua propriedade após o pagamento integral.
+          </p>
+          <p>
+            <strong>Do Professor:</strong> Daniel Gehlen mantém os direitos
+            sobre:
+          </p>
+          <ul>
+            <li>Metodologias de ensino e materiais didáticos originais</li>
+            <li>Arranjos e composições criadas independentemente</li>
+            <li>Gravações de demonstração disponíveis no site</li>
+          </ul>
+          <p>
+            <strong>Compartilhamento:</strong> Partituras da biblioteca são para
+            uso pessoal. Redistribuição comercial requer autorização.
+          </p>
+        </div>
+
+        <div class="terms-section">
+          <h2>
+            <i class="fas fa-calendar-times"></i> 5. Cancelamento e Rescisão
+          </h2>
+          <p>
+            <strong>Pelo Cliente:</strong> Você pode cancelar serviços mediante
+            comunicação por e-mail. Taxas de cancelamento podem aplicar conforme
+            seção 3.
+          </p>
+          <p>
+            <strong>Pelo Professor:</strong> Podemos suspender ou cancelar
+            serviços se:
+          </p>
+          <ul>
+            <li>Violar estes Termos de Serviço</li>
+            <li>Não efetuar pagamentos</li>
+            <li>Praticar conduta inadequada durante aulas</li>
+            <li>Utilizar serviços para fins ilegais</li>
+          </ul>
+        </div>
+
+        <div class="terms-section">
+          <h2>
+            <i class="fas fa-shield-alt"></i> 6. Limitação de Responsabilidade
+          </h2>
+          <p>Daniel Gehlen não será responsável por:</p>
+          <ul>
+            <li>Danos indiretos, incidentais ou consequenciais</li>
+            <li>Perda de dados ou informações</li>
+            <li>
+              Interrupções temporárias do serviço por motivo de força maior
+            </li>
+            <li>Resultados de aprendizagem que dependem da prática do aluno</li>
+          </ul>
+
+          <div class="info-box">
+            <p>
+              <strong
+                ><i class="fas fa-info-circle"></i> Isenção de Garantia:</strong
+              >
+              Os serviços são fornecidos "no estado em que se encontram". Não
+              garantimos resultados específicos de aprendizagem ou que os
+              serviços atenderão todas as suas expectativas.
+            </p>
+          </div>
+        </div>
+
+        <div class="terms-section">
+          <h2><i class="fas fa-balance-scale"></i> 7. Disposições Gerais</h2>
+          <p>
+            <strong>Alterações nos Termos:</strong> Podemos atualizar estes
+            termos periodicamente. Alterações significativas serão comunicadas
+            por e-mail.
+          </p>
+          <p>
+            <strong>Legislação Aplicável:</strong> Estes termos são regidos
+            pelas leis brasileiras.
+          </p>
+          <p>
+            <strong>Foro:</strong> Qualquer disputa será resolvida no foro da
+            comarca de Porto Alegre/RS.
+          </p>
+          <p>
+            <strong>Contato:</strong> Para questões sobre estes termos:
+            contato@danielgehlen.com
+          </p>
+        </div>
+
+        <div class="terms-footer">
+          <p>
+            Ao utilizar nossos serviços, você confirma que leu, compreendeu e
+            aceitou estes Termos de Serviço.
+          </p>
+          <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Voltar para o site
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>© 2026 Daniel Gehlen. Seu caminho musical com transparência.</p>
+        <div class="footer-links">
+          <a href="privacidade.html">Política de Privacidade</a>
+          <a href="termos.html">Termos de Serviço</a>
+          <a href="mailto:contato@danielgehlen.com">Contato</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Tema automático
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = localStorage.getItem("theme") || "dark";
+        if (savedTheme === "light") {
+          document.body.classList.add("light-mode");
+        }
+      });
+    </script>
+  </body>
+</html>
