@@ -101,3 +101,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("✅ Services page configurada");
 });
+
+// FAQ Accordion - Permite múltiplos itens abertos
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+            // Apenas alterna o item clicado, sem fechar os outros
+            item.classList.toggle('active');
+        });
+    });
+});

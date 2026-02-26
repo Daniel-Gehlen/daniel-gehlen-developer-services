@@ -54,8 +54,8 @@
               <i class="fas fa-envelope"></i>
               <div class="info-content">
                 <span class="info-label">E-mail</span>
-                <a href="mailto:contato@danielgehlen.com" class="info-value"
-                  >contato@danielgehlen.com</a
+                <a href="mailto:danielgehlentech@gmail.com" class="info-value"
+                  >danielgehlentech@gmail.com</a
                 >
               </div>
             </div>
@@ -65,10 +65,10 @@
               <div class="info-content">
                 <span class="info-label">WhatsApp</span>
                 <a
-                  href="https://wa.me/SEUNUMERO"
+                  href="https://wa.me/+5551989345497"
                   target="_blank"
                   class="info-value"
-                  >+55 (51) 99999-9999</a
+                  >+55 (51) 98934-5497</a
                 >
               </div>
             </div>
@@ -81,6 +81,18 @@
               </div>
             </div>
           </div>
+
+          <div class="service-badges">
+            <span class="service-badge">
+              <i class="fas fa-bolt"></i> Resposta Rápida
+            </span>
+            <span class="service-badge">
+              <i class="fas fa-shield-alt"></i> Dados Seguros
+            </span>
+            <span class="service-badge">
+              <i class="fas fa-headset"></i> Suporte Personalizado
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -91,11 +103,16 @@
         <div class="contact-grid">
           <!-- Contact Form -->
           <div class="contact-form-section">
-            <div class="form-header">
-              <h2>Envie sua Mensagem</h2>
-              <p>
-                Preencha o formulário abaixo e entrarei em contato em até 24h
-              </p>
+            <div class="service-header">
+              <div class="service-icon">
+                <i class="fas fa-paper-plane"></i>
+              </div>
+              <div class="service-title">
+                <h2>Envie sua Mensagem</h2>
+                <p>
+                  Preencha o formulário abaixo e entrarei em contato em até 24h
+                </p>
+              </div>
             </div>
 
             <form class="contact-form" id="mainContactForm">
@@ -105,19 +122,19 @@
               <input type="hidden" id="referringPage" name="referring_page" />
 
               <!-- Context Detection -->
-              <div class="context-detection" id="contextDetection">
+              <div class="context-detection">
                 <div class="context-header">
                   <i class="fas fa-info-circle"></i>
-                  <span>Detectando contexto da sua mensagem...</span>
+                  <span
+                    >Informações de contexto detectadas automaticamente</span
+                  >
                 </div>
-                <div class="context-details" id="contextDetails">
-                  <!-- Filled by JavaScript -->
-                </div>
+                <div class="context-details" id="contextDetails"></div>
               </div>
 
               <!-- Basic Info -->
-              <div class="form-section">
-                <h3 class="section-title">Informações Básicas</h3>
+              <div class="service-tech" style="margin-bottom: 2rem">
+                <h3><i class="fas fa-user-circle"></i> Informações Básicas</h3>
 
                 <div class="form-row">
                   <div class="form-group">
@@ -175,13 +192,13 @@
               </div>
 
               <!-- Project Details -->
-              <div class="form-section">
-                <h3 class="section-title">Detalhes do Projeto</h3>
+              <div class="service-tech" style="margin-bottom: 2rem">
+                <h3>
+                  <i class="fas fa-project-diagram"></i> Detalhes do Projeto
+                </h3>
 
                 <div class="form-group">
-                  <label for="projectType">
-                    <i class="fas fa-project-diagram"></i> Tipo de Projeto *
-                  </label>
+                  <label for="projectType">Tipo de Projeto *</label>
                   <select id="projectType" name="project_type" required>
                     <option value="">Selecione uma opção...</option>
                     <option value="new_website">Novo Website</option>
@@ -199,60 +216,56 @@
                   </select>
                 </div>
 
-                <div class="form-group">
-                  <label for="projectStage">
-                    <i class="fas fa-map-marker-alt"></i> Estágio do Projeto
-                  </label>
-                  <select id="projectStage" name="project_stage">
-                    <option value="">Em qual estágio está?</option>
-                    <option value="idea">Apenas uma ideia</option>
-                    <option value="planning">Planejamento</option>
-                    <option value="design">Design/Protótipo</option>
-                    <option value="development">Em desenvolvimento</option>
-                    <option value="launched">Já lançado</option>
-                    <option value="redesign">Redesign/Refatoração</option>
-                  </select>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="projectStage">Estágio do Projeto</label>
+                    <select id="projectStage" name="project_stage">
+                      <option value="">Em qual estágio está?</option>
+                      <option value="idea">Apenas uma ideia</option>
+                      <option value="planning">Planejamento</option>
+                      <option value="design">Design/Protótipo</option>
+                      <option value="development">Em desenvolvimento</option>
+                      <option value="launched">Já lançado</option>
+                      <option value="redesign">Redesign/Refatoração</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="projectDeadline">Prazo Estimado</label>
+                    <select id="projectDeadline" name="deadline">
+                      <option value="">Qual o prazo desejado?</option>
+                      <option value="urgent">Urgente (até 2 semanas)</option>
+                      <option value="soon">Breve (1-2 meses)</option>
+                      <option value="normal">Normal (3-6 meses)</option>
+                      <option value="flexible">
+                        Flexível (sem prazo definido)
+                      </option>
+                    </select>
+                  </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="projectDeadline">
-                    <i class="fas fa-calendar-alt"></i> Prazo Estimado
-                  </label>
-                  <select id="projectDeadline" name="deadline">
-                    <option value="">Qual o prazo desejado?</option>
-                    <option value="urgent">Urgente (até 2 semanas)</option>
-                    <option value="soon">Breve (1-2 meses)</option>
-                    <option value="normal">Normal (3-6 meses)</option>
-                    <option value="flexible">
-                      Flexível (sem prazo definido)
-                    </option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="projectBudget">
-                    <i class="fas fa-money-bill-wave"></i> Faixa de Orçamento
-                  </label>
-                  <select id="projectBudget" name="budget">
-                    <option value="">Qual o orçamento estimado?</option>
-                    <option value="under_5k">Até R$ 5.000</option>
-                    <option value="5k_10k">R$ 5.000 - R$ 10.000</option>
-                    <option value="10k_25k">R$ 10.000 - R$ 25.000</option>
-                    <option value="25k_50k">R$ 25.000 - R$ 50.000</option>
-                    <option value="over_50k">Acima de R$ 50.000</option>
-                    <option value="discuss">Precisa discutir</option>
-                  </select>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="projectBudget">Faixa de Orçamento</label>
+                    <select id="projectBudget" name="budget">
+                      <option value="">Qual o orçamento estimado?</option>
+                      <option value="under_5k">Até R$ 5.000</option>
+                      <option value="5k_10k">R$ 5.000 - R$ 10.000</option>
+                      <option value="10k_25k">R$ 10.000 - R$ 25.000</option>
+                      <option value="25k_50k">R$ 25.000 - R$ 50.000</option>
+                      <option value="over_50k">Acima de R$ 50.000</option>
+                      <option value="discuss">Precisa discutir</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
               <!-- Message & Files -->
-              <div class="form-section">
-                <h3 class="section-title">Mensagem e Anexos</h3>
+              <div class="service-tech" style="margin-bottom: 2rem">
+                <h3><i class="fas fa-comment-dots"></i> Mensagem e Anexos</h3>
 
                 <div class="form-group">
-                  <label for="contactMessage">
-                    <i class="fas fa-comment-dots"></i> Descreva seu projeto *
-                  </label>
+                  <label for="contactMessage">Descreva seu projeto *</label>
                   <textarea
                     id="contactMessage"
                     name="message"
@@ -266,9 +279,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="contactFiles">
-                    <i class="fas fa-paperclip"></i> Anexos (opcional)
-                  </label>
+                  <label for="contactFiles">Anexos (opcional)</label>
                   <div class="file-upload-area" id="fileUploadArea">
                     <i class="fas fa-cloud-upload-alt"></i>
                     <p>Arraste arquivos aqui ou clique para selecionar</p>
@@ -287,9 +298,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="referenceLinks">
-                    <i class="fas fa-link"></i> Links de Referência
-                  </label>
+                  <label for="referenceLinks">Links de Referência</label>
                   <textarea
                     id="referenceLinks"
                     name="reference_links"
@@ -300,8 +309,8 @@
               </div>
 
               <!-- Preferences -->
-              <div class="form-section">
-                <h3 class="section-title">Preferências de Contato</h3>
+              <div class="service-tech" style="margin-bottom: 2rem">
+                <h3><i class="fas fa-clock"></i> Preferências de Contato</h3>
 
                 <div class="form-row">
                   <div class="form-group">
@@ -384,9 +393,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="additionalNotes">
-                    <i class="fas fa-sticky-note"></i> Observações Adicionais
-                  </label>
+                  <label for="additionalNotes">Observações Adicionais</label>
                   <textarea
                     id="additionalNotes"
                     name="additional_notes"
@@ -397,7 +404,7 @@
               </div>
 
               <!-- Terms & Submit -->
-              <div class="form-section">
+              <div class="service-tech">
                 <div class="form-group">
                   <label class="checkbox-option">
                     <input
@@ -452,106 +459,191 @@
           <!-- Contact Info Sidebar -->
           <div class="contact-sidebar">
             <!-- Quick Contact -->
-            <div class="sidebar-card">
-              <div class="card-header">
+            <div class="service-card" style="margin-bottom: 2rem">
+              <div class="service-icon">
                 <i class="fas fa-bolt"></i>
-                <h3>Contato Rápido</h3>
               </div>
-              <div class="card-content">
-                <div class="quick-contact-item">
-                  <i class="fab fa-whatsapp"></i>
+              <h3>Contato Rápido</h3>
+              <div class="service-features" style="margin-top: 1.5rem">
+                <div
+                  class="quick-contact-item"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  <i
+                    class="fab fa-whatsapp"
+                    style="font-size: 2rem; color: var(--dev-accent)"
+                  ></i>
                   <div>
-                    <h4>WhatsApp</h4>
+                    <h4 style="margin-bottom: 0.3rem">WhatsApp</h4>
                     <a
-                      href="https://wa.me/SEUNUMERO"
+                      href="https://wa.me/+5551989345497"
                       target="_blank"
-                      class="contact-link"
+                      class="service-link"
+                      >Enviar mensagem agora</a
                     >
-                      Enviar mensagem agora
-                    </a>
                   </div>
                 </div>
 
-                <div class="quick-contact-item">
-                  <i class="fas fa-phone"></i>
+                <div
+                  class="quick-contact-item"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  <i
+                    class="fas fa-phone"
+                    style="font-size: 2rem; color: var(--dev-accent)"
+                  ></i>
                   <div>
-                    <h4>Telefone</h4>
-                    <a href="tel:+5551999999999" class="contact-link">
-                      +55 (51) 99999-9999
-                    </a>
+                    <h4 style="margin-bottom: 0.3rem">Telefone</h4>
+                    <a href="tel:+5551989345497" class="service-link"
+                      >+55 (51) 98934-5497</a
+                    >
                   </div>
                 </div>
 
-                <div class="quick-contact-item">
-                  <i class="fas fa-video"></i>
+                <div
+                  class="quick-contact-item"
+                  style="display: flex; align-items: center; gap: 1rem"
+                >
+                  <i
+                    class="fas fa-video"
+                    style="font-size: 2rem; color: var(--dev-accent)"
+                  ></i>
                   <div>
-                    <h4>Videochamada</h4>
-                    <a href="#" class="contact-link" id="scheduleCall">
-                      Agendar reunião
-                    </a>
+                    <h4 style="margin-bottom: 0.3rem">Videochamada</h4>
+                    <a href="#" class="service-link" id="scheduleCall"
+                      >Agendar reunião</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Service Status -->
-            <div class="sidebar-card">
-              <div class="card-header">
+            <div class="service-card" style="margin-bottom: 2rem">
+              <div class="service-icon">
                 <i class="fas fa-chart-line"></i>
-                <h3>Disponibilidade</h3>
               </div>
-              <div class="card-content">
-                <div class="availability-status">
-                  <div class="status-indicator available"></div>
-                  <div class="status-info">
-                    <h4>Disponível para novos projetos</h4>
-                    <p>Capacidade atual: 70%</p>
+              <h3>Disponibilidade</h3>
+              <div class="service-features" style="margin-top: 1.5rem">
+                <div
+                  class="availability-status"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1.5rem;
+                  "
+                >
+                  <div
+                    class="status-indicator"
+                    style="
+                      width: 12px;
+                      height: 12px;
+                      background-color: var(--dev-success);
+                      border-radius: 50%;
+                      box-shadow: 0 0 10px var(--dev-success);
+                    "
+                  ></div>
+                  <div>
+                    <h4 style="margin-bottom: 0.3rem">
+                      Disponível para novos projetos
+                    </h4>
+                    <p style="color: var(--dev-text-light)">
+                      Capacidade atual: 70%
+                    </p>
                   </div>
                 </div>
 
-                <div class="availability-timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-label">Tempo de resposta:</span>
-                    <span class="timeline-value">≤ 24h</span>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-label">Proposta:</span>
-                    <span class="timeline-value">2-3 dias</span>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-label">Início do projeto:</span>
-                    <span class="timeline-value">1-2 semanas</span>
-                  </div>
+                <div
+                  class="timeline-item"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.8rem 0;
+                    border-bottom: 1px solid var(--dev-border);
+                  "
+                >
+                  <span style="color: var(--dev-text-light)"
+                    >Tempo de resposta:</span
+                  >
+                  <span style="color: var(--dev-accent); font-weight: 600"
+                    >≤ 24h</span
+                  >
+                </div>
+                <div
+                  class="timeline-item"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.8rem 0;
+                    border-bottom: 1px solid var(--dev-border);
+                  "
+                >
+                  <span style="color: var(--dev-text-light)">Proposta:</span>
+                  <span style="color: var(--dev-accent); font-weight: 600"
+                    >2-3 dias</span
+                  >
+                </div>
+                <div
+                  class="timeline-item"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.8rem 0;
+                  "
+                >
+                  <span style="color: var(--dev-text-light)"
+                    >Início do projeto:</span
+                  >
+                  <span style="color: var(--dev-accent); font-weight: 600"
+                    >1-2 semanas</span
+                  >
                 </div>
               </div>
             </div>
 
             <!-- FAQ Preview -->
-            <div class="sidebar-card">
-              <div class="card-header">
+            <div class="service-card" style="margin-bottom: 2rem">
+              <div class="service-icon">
                 <i class="fas fa-question-circle"></i>
-                <h3>FAQ Rápido</h3>
               </div>
-              <div class="card-content">
-                <div class="faq-item">
-                  <h4>Qual o valor da hora?</h4>
-                  <p>
+              <h3>FAQ Rápido</h3>
+              <div class="service-features" style="margin-top: 1.5rem">
+                <div class="faq-item" style="margin-bottom: 1.5rem">
+                  <h4 style="color: var(--dev-accent); margin-bottom: 0.5rem">
+                    Qual o valor da hora?
+                  </h4>
+                  <p style="color: var(--dev-text-light)">
                     R$ 80/h para projetos avulsos. Para projetos fixos, envio
                     proposta personalizada.
                   </p>
                 </div>
 
-                <div class="faq-item">
-                  <h4>Trabalha com equipe?</h4>
-                  <p>
-                    Sim, para projetos maiores posso montar uma equipe
+                <div class="faq-item" style="margin-bottom: 1.5rem">
+                  <h4 style="color: var(--dev-accent); margin-bottom: 0.5rem">
+                    Trabalha com equipe?
+                  </h4>
+                  <p style="color: var(--dev-text-light)">
+                    Sim, para projetos maiores posso trabalhar com sua equipe
                     especializada.
                   </p>
                 </div>
 
-                <div class="faq-item">
-                  <h4>Faz manutenção?</h4>
-                  <p>
+                <div class="faq-item" style="margin-bottom: 1.5rem">
+                  <h4 style="color: var(--dev-accent); margin-bottom: 0.5rem">
+                    Faz manutenção?
+                  </h4>
+                  <p style="color: var(--dev-text-light)">
                     Sim, ofereço pacotes de manutenção mensal para sistemas
                     existentes.
                   </p>
@@ -564,39 +656,101 @@
             </div>
 
             <!-- Social Links -->
-            <div class="sidebar-card">
-              <div class="card-header">
+            <div class="service-card">
+              <div class="service-icon">
                 <i class="fas fa-share-alt"></i>
-                <h3>Conecte-se</h3>
               </div>
-              <div class="card-content">
-                <div class="social-links">
-                  <a
-                    href="https://github.com/Daniel-Gehlen"
-                    target="_blank"
-                    class="social-link github"
-                  >
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/daniel-gehlen/"
-                    target="_blank"
-                    class="social-link linkedin"
-                  >
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                  </a>
-                  <a href="#" class="social-link instagram">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                  </a>
-                  <a href="#" class="social-link twitter">
-                    <i class="fab fa-twitter"></i>
-                    <span>Twitter</span>
-                  </a>
-                </div>
+              <h3>Conecte-se</h3>
+              <div
+                class="tech-stack"
+                style="margin-top: 1.5rem; justify-content: center"
+              >
+                <a
+                  href="https://github.com/Daniel-Gehlen"
+                  target="_blank"
+                  class="tech-item"
+                >
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/daniel-gehlen/"
+                  target="_blank"
+                  class="tech-item"
+                >
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map / Location Section -->
+    <section class="workflow-section">
+      <div class="container">
+        <h2 class="section-title">Localização & Atendimento</h2>
+
+        <div
+          class="contact-info-bar"
+          style="margin-top: 3rem; background-color: var(--dev-card-bg)"
+        >
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info-content">
+              <span class="info-label">Localização</span>
+              <span class="info-value">Porto Alegre, RS - Brasil</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-globe-americas"></i>
+            <div class="info-content">
+              <span class="info-label">Fuso Horário</span>
+              <span class="info-value">GMT-3 (Brasília)</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fas fa-language"></i>
+            <div class="info-content">
+              <span class="info-label">Idiomas</span>
+              <span class="info-value">Português, Inglês</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="workflow-timeline" style="margin-top: 4rem">
+          <div class="workflow-item">
+            <div class="workflow-number"><i class="fas fa-headset"></i></div>
+            <div class="workflow-content">
+              <h3>Atendimento Personalizado</h3>
+              <p>
+                Cada projeto recebe atenção exclusiva e suporte dedicado do
+                início ao fim.
+              </p>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number"><i class="fas fa-clock"></i></div>
+            <div class="workflow-content">
+              <h3>Resposta Rápida</h3>
+              <p>
+                Compromisso de resposta em até 24 horas úteis para todas as
+                mensagens.
+              </p>
+            </div>
+          </div>
+
+          <div class="workflow-item">
+            <div class="workflow-number"><i class="fas fa-lock"></i></div>
+            <div class="workflow-content">
+              <h3>Confidencialidade</h3>
+              <p>
+                Seus dados e informações do projeto são tratados com total
+                sigilo e segurança.
+              </p>
             </div>
           </div>
         </div>
@@ -615,14 +769,12 @@
           horas úteis.
         </p>
 
-        <div class="modal-details" id="modalDetails">
-          <!-- Details will be shown here -->
-        </div>
+        <div class="modal-details" id="modalDetails"></div>
 
         <div class="modal-actions">
           <button class="btn btn-primary" id="closeModal">Fechar</button>
           <a
-            href="https://wa.me/SEUNUMERO"
+            href="https://wa.me/+5551989345497"
             target="_blank"
             class="btn btn-secondary"
           >
@@ -632,13 +784,104 @@
       </div>
     </div>
 
+    <!-- Final CTA -->
+    <section class="services-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Pronto para começar?</h2>
+          <p>Vamos conversar sobre seu projeto e encontrar a melhor solução.</p>
+
+          <div class="cta-buttons">
+            <a href="#mainContactForm" class="btn btn-primary btn-large">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </a>
+            <a href="portfolio.html" class="btn btn-secondary btn-large">
+              <i class="fas fa-eye"></i> Ver Portfólio
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="dev-footer">
-      <!-- Same footer as index.html -->
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo-code">
+              <span class="code-tag">&lt;</span>
+              <span class="code-name">Daniel Gehlen</span>
+              <span class="code-tag">/&gt;</span>
+            </div>
+            <p class="footer-tagline">
+              Desenvolvimento web com foco em performance e experiência do
+              usuário.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Navegação</h4>
+              <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="services.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Serviços</h4>
+              <ul>
+                <li><a href="services.html#web">Web Development</a></li>
+                <li><a href="services.html#api">APIs & Backend</a></li>
+                <li><a href="services.html#mobile">Mobile Solutions</a></li>
+                <li><a href="services.html#devops">DevOps</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Social</h4>
+              <ul class="footer-social">
+                <li>
+                  <a href="https://github.com/Daniel-Gehlen" target="_blank"
+                    ><i class="fab fa-github"></i> GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/daniel-gehlen/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin"></i> LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; 2026 Daniel Gehlen. Todos os direitos reservados.
+          </div>
+          <div class="footer-built">
+            <span>Desenvolvido com</span>
+            <i class="fas fa-heart"></i>
+            <span>e</span>
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="main.js"></script>
-    <script src="contact.js"></script>
     <script src="contact.js"></script>
   </body>
 </html>

@@ -82,24 +82,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
+
+      // Check file size (10MB limit)
+      if (file.size > 10 * 1024 * 1024) {
+        alert(`Arquivo ${file.name} excede o limite de 10MB`);
+        continue;
+      }
+
       const fileElement = document.createElement("div");
       fileElement.className = "file-item";
+
+      // Get appropriate icon based on file type
+      let fileIcon = "fa-file";
+      if (file.type.includes("pdf")) fileIcon = "fa-file-pdf";
+      else if (file.type.includes("image")) fileIcon = "fa-file-image";
+      else if (file.type.includes("word")) fileIcon = "fa-file-word";
+      else if (file.type.includes("zip") || file.type.includes("rar"))
+        fileIcon = "fa-file-archive";
+
       fileElement.innerHTML = `
-                <i class="fas fa-file"></i>
-                <div class="file-info">
-                    <span class="file-name">${file.name}</span>
-                    <span class="file-size">${formatFileSize(file.size)}</span>
-                </div>
-                <button class="file-remove" data-index="${i}">
-                    <i class="fas fa-times"></i>
-                </button>
-            `;
+        <i class="fas ${fileIcon}"></i>
+        <div class="file-info">
+          <span class="file-name">${file.name}</span>
+          <span class="file-size">${formatFileSize(file.size)}</span>
+        </div>
+        <button type="button" class="file-remove" data-index="${i}">
+          <i class="fas fa-times"></i>
+        </button>
+      `;
       filePreview.appendChild(fileElement);
     }
 
     // Add remove functionality
     filePreview.querySelectorAll(".file-remove").forEach((button) => {
-      button.addEventListener("click", function () {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
         const index = parseInt(this.getAttribute("data-index"));
         removeFile(index);
       });
@@ -137,33 +154,48 @@ document.addEventListener("DOMContentLoaded", function () {
       url: window.location.href,
       time: new Date().toLocaleTimeString("pt-BR"),
       date: new Date().toLocaleDateString("pt-BR"),
-      referrer: document.referrer || "Nenhuma",
+      referrer: document.referrer || "Acesso direto",
     };
 
     // Show context detection
     contextDetection.classList.add("active");
     contextDetails.innerHTML = `
-            <p><strong>Página:</strong> ${context.page}</p>
-            <p><strong>Data:</strong> ${context.date} ${context.time}</p>
-            <p><strong>Origem:</strong> ${context.referrer}</p>
-        `;
+      <div class="context-item">
+        <i class="fas fa-file-alt"></i>
+        <span><strong>Página:</strong> ${context.page}</span>
+      </div>
+      <div class="context-item">
+        <i class="fas fa-calendar-alt"></i>
+        <span><strong>Data:</strong> ${context.date} ${context.time}</span>
+      </div>
+      <div class="context-item">
+        <i class="fas fa-link"></i>
+        <span><strong>Origem:</strong> ${context.referrer}</span>
+      </div>
+    `;
 
     // Set hidden fields
-    document.getElementById("referringPage").value = context.referrer;
-    document.getElementById("userBrowser").value = navigator.userAgent;
-    document.getElementById("userTimezone").value =
-      Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const referringPage = document.getElementById("referringPage");
+    const userBrowser = document.getElementById("userBrowser");
+    const userTimezone = document.getElementById("userTimezone");
+
+    if (referringPage) referringPage.value = context.referrer;
+    if (userBrowser) userBrowser.value = navigator.userAgent;
+    if (userTimezone)
+      userTimezone.value = Intl.DateTimeFormat().resolvedOptions().timeZone;
   }
 
   // Geolocation (with permission)
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       function (position) {
-        const location = `Lat: ${position.coords.latitude}, Lon: ${position.coords.longitude}`;
-        document.getElementById("userLocation").value = location;
+        const location = `Lat: ${position.coords.latitude.toFixed(4)}, Lon: ${position.coords.longitude.toFixed(4)}`;
+        const userLocation = document.getElementById("userLocation");
+        if (userLocation) userLocation.value = location;
       },
       function () {
-        document.getElementById("userLocation").value = "Não permitido";
+        const userLocation = document.getElementById("userLocation");
+        if (userLocation) userLocation.value = "Não permitido";
       },
     );
   }
@@ -172,6 +204,15 @@ document.addEventListener("DOMContentLoaded", function () {
   if (contactForm) {
     contactForm.addEventListener("submit", async function (e) {
       e.preventDefault();
+
+      // Validate terms
+      const acceptTerms = document.getElementById("acceptTerms");
+      if (!acceptTerms || !acceptTerms.checked) {
+        alert(
+          "Você precisa aceitar a Política de Privacidade para enviar a mensagem.",
+        );
+        return;
+      }
 
       if (!submitButton) return;
 
@@ -192,20 +233,44 @@ document.addEventListener("DOMContentLoaded", function () {
         if (successModal) {
           const modalDetails = document.getElementById("modalDetails");
           if (modalDetails) {
+            const now = new Date();
+            const protocol = Math.random()
+              .toString(36)
+              .substr(2, 9)
+              .toUpperCase();
+
             modalDetails.innerHTML = `
-                            <h4>Resumo do Envio</h4>
-                            <p><strong>Nome:</strong> ${data.name || "Não informado"}</p>
-                            <p><strong>Projeto:</strong> ${data.project_type || "Não especificado"}</p>
-                            <p><strong>Contato preferido:</strong> ${data.contact_preference || "E-mail"}</p>
-                        `;
+              <div class="detail-item">
+                <i class="fas fa-check-circle"></i>
+                <span><strong>Nome:</strong> ${data.name || "Não informado"}</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-project-diagram"></i>
+                <span><strong>Projeto:</strong> ${getProjectTypeText(data.project_type)}</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-clock"></i>
+                <span><strong>Enviado:</strong> ${now.toLocaleTimeString("pt-BR")}</span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-hashtag"></i>
+                <span><strong>Protocolo:</strong> #${protocol}</span>
+              </div>
+            `;
           }
-          successModal.classList.add("active");
+
+          // Show modal with display flex
+          successModal.style.display = "flex";
+          document.body.style.overflow = "hidden"; // Prevent scrolling
         }
 
         // Reset form
         contactForm.reset();
         if (filePreview) filePreview.innerHTML = "";
         if (charCount) charCount.textContent = "0";
+
+        // Reset file input
+        if (fileInput) fileInput.value = "";
       } catch (error) {
         console.error("Form submission error:", error);
         alert("Erro ao enviar mensagem. Tente novamente.");
@@ -216,16 +281,41 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Helper function to get project type text
+  function getProjectTypeText(value) {
+    const types = {
+      new_website: "Novo Website",
+      web_application: "Aplicação Web",
+      mobile_app: "Aplicativo Mobile",
+      api_development: "Desenvolvimento de API",
+      system_integration: "Integração de Sistemas",
+      consulting: "Consultoria Técnica",
+      maintenance: "Manutenção/Atualização",
+      other: "Outro",
+    };
+    return types[value] || value || "Não especificado";
+  }
+
   // Modal close
   if (closeModal && successModal) {
     closeModal.addEventListener("click", function () {
-      successModal.classList.remove("active");
+      successModal.style.display = "none";
+      document.body.style.overflow = ""; // Restore scrolling
     });
 
     // Close on click outside
     successModal.addEventListener("click", function (e) {
       if (e.target === successModal) {
-        successModal.classList.remove("active");
+        successModal.style.display = "none";
+        document.body.style.overflow = "";
+      }
+    });
+
+    // Close on ESC key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && successModal.style.display === "flex") {
+        successModal.style.display = "none";
+        document.body.style.overflow = "";
       }
     });
   }
@@ -235,7 +325,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (scheduleCall) {
     scheduleCall.addEventListener("click", function (e) {
       e.preventDefault();
-      alert("Funcionalidade de agendamento será implementada em breve!");
+      alert(
+        "Funcionalidade de agendamento será implementada em breve! Por enquanto, entre em contato por WhatsApp ou e-mail.",
+      );
     });
   }
 
