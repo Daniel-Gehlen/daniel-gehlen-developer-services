@@ -1018,12 +1018,22 @@ body.light-mode .form-group label {
   font-family: "Inter", sans-serif;
 }
 
+/* força o browser a renderizar o dropdown nativo em dark mode */
+.form-group select {
+  color-scheme: dark;
+}
+
 body.light-mode .form-group input,
 body.light-mode .form-group textarea,
 body.light-mode .form-group select {
   background-color: white;
   border-color: var(--dev-light-border);
   color: var(--dev-light-text);
+}
+
+/* light mode: dropdown nativo em modo claro */
+body.light-mode .form-group select {
+  color-scheme: light;
 }
 
 .form-group input:focus,
@@ -1033,6 +1043,8 @@ body.light-mode .form-group select {
   border-color: var(--dev-accent);
   box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
 }
+
+
 
 .form-group textarea {
   min-height: 120px;
